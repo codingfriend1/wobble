@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+	<meta charset="UTF-8"/>
+	<title>Wobble Demo</title>
+	<script type="text/javascript" src="wobble.js"></script>
+    </head>
+    <style>
+	body { margin: 0px; }
+	#shake
+	{
+	    width: 300px;
+	    height: 300px;
+	    background-color: rgba(30, 144, 255, .5);
+	    margin: auto;
+	    border-radius: 30px;
+	}
+	#msg
+	{
+	   text-align: center;
+           line-height: 300px;
+	   font-size: 30px;
+           font-family: sans-serif;
+           font-weight: 900;
+	   color: rgba(0, 0, 0, 0.8);
+	}
+    </style>
+    <body>
+	<div id="shake">
+	    <div id="msg">Hover over me.</div>
+	</div>
+	<script>
+	    onload = function() {
+	        var elem = document.getElementById("shake");
+	        var r = function() { elem.style.marginTop = (innerHeight-elem.clientHeight)/2 + "px"; }();
+	        window.onresize = r;
+	        elem.onmouseover = function() { addWobble(elem,2); };
+	        elem.onmouseleave = function() { removeWobble(elem); };
+	    };
+	</script>
+    </body>
+</html>
