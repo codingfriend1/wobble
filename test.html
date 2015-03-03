@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <head>
+	<meta charset="UTF-8"/>
+	<title>Wobble Test</title>
+	<script type="text/javascript" src="wobble.js"></script>
+    </head>
+    <body>
+	<div id="header" style="width:200px; height:200px; background-color:red;">
+	    Wobble Me
+	</div>
+	<script>
+	    window.onload = function() {
+	        var elem = document.getElementById("header");
+	        elem.onmouseover = function() { addWobble(elem,2); };
+	        elem.onmouseleave = function() { removeWobble(elem); };
+	    };
+	</script>
+    </body>
+</html>
