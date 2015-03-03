@@ -14,7 +14,7 @@ For example:
 
 `addWobble(elem, deg)`
 
-where `elem` is the element you want to wobble and `deg` is the amount you want to wobble it.
+where `elem` is the element you want to wobble and `deg` is the amount in degrees you want to wobble it.
 
 `removeWobble(elem)`
 
