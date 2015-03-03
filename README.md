@@ -22,3 +22,4 @@ where `elem` is the element you want to stop wobbling.
 
 ## Demo:
 
+http://vivekmumbles.github.io/wobble/demo.html
