@@ -1,18 +1,20 @@
 
-function addWobble(elem, amnt) {
+function addWobble(elem, amnt, speed) {
     var wobbleStyle = document.getElementById("wobbleStyle");
     if (wobbleStyle == null) {
 	wobbleStyle = document.createElement("style");
     }
+    
+    var speed = speed || 0.4;
     wobbleStyle.id = "wobbleStyle";
     var deg = amnt + "deg";
     wobbleStyle.innerText = " "+
 ".wobble "+
 "{ "+	
-"	-webkit-animation: wiggle 0.2s ease infinite; "+
-"        -moz-animation: wiggle 0.2s ease infinite; "+
-"        -o-animation: wiggle 0.2s ease infinite; "+
-"        animation: wiggle 0.2s ease infinite; "+
+"	-webkit-animation: wiggle " + speed + "s ease infinite; "+
+"        -moz-animation: wiggle " + speed + "s ease infinite; "+
+"        -o-animation: wiggle " + speed + "s ease infinite; "+
+"        animation: wiggle " + speed + "s ease infinite; "+
 "} "+
 "@-webkit-keyframes wiggle "+
 "{ "+
